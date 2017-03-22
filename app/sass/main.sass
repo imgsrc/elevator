@@ -1,0 +1,50 @@
+$output-bourbon-deprecation-warnings: false !default
+@import ../../bourbon/bourbon
+@import fonts
+@import libs
+@import vars
+@import settings
+
+.main-head
+  position: relative
+  min-height: 90vh
+.top-line
+  color: $color
+  padding: 30px 0
+  .top-logo
+    p
+      display: inline-block
+      font:
+        family: "OpenSansRegular", sans-serif
+        size: 24px
+      padding: 5px 10px
+      color: $accent
+      border: 2px solid $accent
+  .top-nav
+    margin-top: 10px
+    a
+      color: $color
+      text-transform: uppercase
+      margin-right: 50px
+      font:
+        family: "OpenSansRegular", sans-serif
+
+
+.header-content
+  background: $color url("../img/bg_top.png") no-repeat center top
+  background-size: cover
+  color: #fff
+  padding: 15% 0 60px
+  .header-title
+    margin-bottom: 50px
+    font-family: "Yeseva One", sans-serif
+    h1
+      font-size: em(110px)
+      margin-bottom: 0
+    h3
+      font-size: em(19px)
+      margin-top: 10px
+  .header-button
+    a
+      margin-right: 20px
+
