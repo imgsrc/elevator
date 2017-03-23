@@ -31,25 +31,18 @@ $output-bourbon-deprecation-warnings: false !default
         family: "OpenSansRegular", sans-serif
 
 .header-content
-  background: $color url("../img/bg_top.png") no-repeat center top
+  background: $color url("../img/back.png") no-repeat center
   background-size: cover
   color: #fff
   padding: 15% 0
   position: relative
-  &::before
-    position: absolute
-    content: ''
-    width: 100%
-    height: 100%
-    left: 0
-    top: 0
-    z-index: 0
-    background-color: rgba(0, 0, 0, .4)
   .header-title
     margin-bottom: 50px
     font-family: "Yeseva One", sans-serif
     h1
       font-size: em(110px)
+      +media-sm(down)
+        font-size: em(60px)
       margin-bottom: 0
     h3
       font-size: em(19px)
@@ -58,3 +51,44 @@ $output-bourbon-deprecation-warnings: false !default
     a
       margin-right: 20px
 
+.panorama
+  padding: 70px 0
+  .shema
+    background-color: #e7e2e9
+    padding: 130px 0
+    p
+      font-family: "OpenSansLight", sans-serif
+      font-size: em(24px)
+  .header-sect
+    margin-top: 55px
+    h3
+      font-family: "Open Sans Light", sans-serif
+      font-size: em(27px)
+      margin-bottom: 65px
+  .text-sect
+    p
+      font-family: "Open Sans Light", sans-serif
+      font-size: em(18px)
+
+.rooms
+  position: relative
+  display: block
+  margin: 70px 0
+  .room-txt
+    position: absolute
+    display: inline-block
+    left: 10%
+    top: 40%
+    background-color: rgba($white, .85)
+    width: 80%
+    text-align: center
+    padding: 20px 0
+    h3
+      margin: 0
+      color: $accent
+      font-family: "Yeseva One", sans-serif
+      font-size: em(24px)
+
+.map
+  .address
+    background-color: rgba()
