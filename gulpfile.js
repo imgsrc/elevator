@@ -106,8 +106,7 @@ gulp.task('deploy', function () {
     var globs = [
         'dist/**',
         'dist/.htaccess'
-    ];
-    return gulp.src(globs, {buffer: false})
+    ];    return gulp.src(globs, {buffer: false})
         .pipe(conn.dest('./elevator'));
 
 });

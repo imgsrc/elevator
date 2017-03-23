@@ -12,6 +12,8 @@ $output-bourbon-deprecation-warnings: false !default
 .top-line
   color: $color
   padding: 30px 0
+  +media-xs(down)
+    text-align: center
   .top-logo
     p
       display: inline-block
@@ -36,20 +38,24 @@ $output-bourbon-deprecation-warnings: false !default
   color: #fff
   padding: 15% 0
   position: relative
+  +media-xs(down)
+    text-align: center
   .header-title
     margin-bottom: 50px
     font-family: "Yeseva One", sans-serif
     h1
-      font-size: em(110px)
+      font-size: em(104px)
       +media-sm(down)
         font-size: em(60px)
       margin-bottom: 0
     h3
-      font-size: em(19px)
+      font-size: em(23px)
       margin-top: 10px
   .header-button
     a
       margin-right: 20px
+      +media-sm(down)
+        margin-bottom: 10px
 
 .panorama
   padding: 70px 0
@@ -59,12 +65,22 @@ $output-bourbon-deprecation-warnings: false !default
     p
       font-family: "OpenSansLight", sans-serif
       font-size: em(24px)
+      color: rgba($color, .55)
   .header-sect
     margin-top: 55px
     h3
       font-family: "Open Sans Light", sans-serif
       font-size: em(27px)
       margin-bottom: 65px
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        bottom: -30px
+        left: 50%
+        width: 50px
+        height: 2px
+        background-color: $accent
   .text-sect
     p
       font-family: "Open Sans Light", sans-serif
@@ -83,12 +99,70 @@ $output-bourbon-deprecation-warnings: false !default
     width: 80%
     text-align: center
     padding: 20px 0
+    +media-sm(down)
+      left: 0
+      width: 100%
+      text-align: center
     h3
       margin: 0
       color: $accent
       font-family: "Yeseva One", sans-serif
-      font-size: em(24px)
+      font-size: em(25px)
 
 .map
-  .address
-    background-color: rgba()
+  background-color: $gray
+  .bottom-address
+    background-color: rgba($pink, .8)
+    padding: 50px 40px
+    color: $white
+    .contacts
+      margin-bottom: 80px
+    h3
+      font-family: "Yeseva One", sans-serif
+      font-size: em(37px)
+      margin-bottom: 40px
+      letter-spacing: 2px
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        bottom: -5px
+        left: 0
+        width: 60px
+        height: 1px
+        background-color: $white
+    p
+      font-family: "Open Sans Light", sans-serif
+      font-size: em(16px)
+      margin-bottom: 15px
+    .material-icons
+      margin-right: 10px
+      position: relative
+      top: 4px
+    .socials
+      p
+        display: inline-block
+        padding: 7px
+        margin-right: 7px
+        background-color: rgba($white, .2)
+        a
+          color: $white
+          .material-icons
+            margin: 0
+            top: 0
+.main-foot
+  background-color: $purple
+  padding: 50px 0
+  text-align: center
+  display: flex
+  justify-content: center
+  .bottom-logo
+    p
+      display: inline-block
+      font:
+        family: "OpenSansRegular", sans-serif
+        size: 24px
+      padding: 5px 7px
+      margin: 0
+      color: $white
+      border: 2px solid $white
