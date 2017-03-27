@@ -14,16 +14,27 @@ $output-bourbon-deprecation-warnings: false !default
   padding: 40px 0
   +media-xs(down)
     text-align: center
-  .top-logo
-
   .top-nav
     margin-top: 10px
     a
+      position: relative
+      text-decoration: none
       color: $color
       text-transform: uppercase
       margin-right: 50px
       font:
         family: "OpenSansRegular", sans-serif
+      &:before
+        position: absolute
+        content: ''
+        left: 0
+        bottom: -5px
+        width: 100%
+        height: 1px
+        background-color: transparent
+      &:hover, &:focus
+        &:before
+          background-color: #d2d2d3
 
 .header-content
   background: $color url("../img/back.png") no-repeat center
